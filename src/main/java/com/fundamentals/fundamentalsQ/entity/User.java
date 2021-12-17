@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table
+@Table (name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,10 +32,20 @@ public class User {
     }
 
     public User(String name, String email, LocalDate birthday) {
-        this.id = id;
         this.name = name;
         this.email = email;
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", birthday=" + birthday +
+                ", posts=" + posts +
+                '}';
     }
 
     //GETTERS AND SETTERS
@@ -81,14 +91,5 @@ public class User {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
-                ", posts=" + posts +
-                '}';
-    }
+
 }

@@ -3,14 +3,14 @@ package com.fundamentals.fundamentalsQ.entity;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table (name = "post")
 public class Post {
     @Id
-    @Column(name = "id", nullable = false, unique = true)
+    @Column(name = "id_post", nullable = false, unique = true)
     private Long id;
 
-    @Column(name = "descriptions", length = 60)
-    private String descripcion;
+    @Column(name = "description", length = 255)
+    private String description;
 
     @ManyToOne()
     private User user;
@@ -19,19 +19,19 @@ public class Post {
 
     }
 
-    public Post(String descripcion, User user) {
-        this.descripcion = descripcion;
+    public Post(String description, User user) {
+        this.description = description;
         this.user = user;
     }
 
     //GETTERS AND SETTERS
 
     public String getDescripcion() {
-        return descripcion;
+        return description;
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.description = descripcion;
     }
 
     public User getUser() {
@@ -54,7 +54,7 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "id=" + id +
-                ", descripcion='" + descripcion + '\'' +
+                ", description='" + description + '\'' +
                 ", user=" + user +
                 '}';
     }

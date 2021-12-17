@@ -35,7 +35,7 @@ public class GeneralConfiguration {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.h2.Driver");
         dataSourceBuilder.url("jdbc:h2:mem:testdb");
-        dataSourceBuilder.username("");
+        dataSourceBuilder.username("tenki");
         dataSourceBuilder.password("");
         return dataSourceBuilder.build();
     }

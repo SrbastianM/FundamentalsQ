@@ -21,7 +21,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<!-- Bro it cant function but iknow why-->
+		<!-- Bro it cant function but i don't know why-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
